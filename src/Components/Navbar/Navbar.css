@@ -1,0 +1,97 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: #000;
+    color: #fff; /* Set default text color to white */
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+}
+
+/* Mobile Menu Icon */
+.nav-mob-open {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    fill: #fff; /* Ensure icons are white */
+}
+
+.nav-mob-close {
+    display: none;
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    fill: #fff; /* Ensure icons are white */
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-menu li {
+    color: #fff; /* Ensure list items are white */
+}
+
+/* Mobile View Styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%; /* Initially hidden offscreen to the left */
+        width: 250px; /* Set your desired width */
+        height: 100%;
+        background-color: #111;
+        padding-top: 50px;
+        z-index: 10;
+        transition: left 0.3s ease-in-out; /* Transition to slide in from the left */
+    }
+
+    .nav-menu li {
+        text-align: center;
+        padding: 20px;
+        border-bottom: 1px solid #fff;
+        color: #fff; /* Ensure text remains white */
+    }
+
+    .nav-mob-open {
+        display: block;
+    }
+
+    .nav-mob-close {
+        display: block;
+    }
+
+    /* Hide the 'Connect with Me' section when menu is open */
+    .nav-connect {
+        display: none;
+    }
+
+    /* Show 'Connect with Me' again when the menu is closed */
+    .nav-menu.open ~ .nav-connect {
+        display: block;
+    }
+}
+
+/* Ensure links inside the menu are white */
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline; /* Optional hover effect */
+}

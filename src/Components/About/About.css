@@ -1,0 +1,185 @@
+.about-left img {
+    width: 20pc;
+    height: 20pc;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+  }
+  .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+
+  }
+  .about-title{
+    position: relative;
+}
+.about-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.about-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.about-sections{
+    display: flex;
+    gap: 80px;
+}
+.about-right{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.about-para{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size:24px;
+    font-weight: 500;
+
+}
+.about-skills{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about-skill{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    transition: 0.3s;
+
+}
+.about-skill p{
+    min-width: 150px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.about-skill hr{
+    outline:none;
+    border: none;
+    width: 50%;
+    height: 8px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, rgb(87, 13, 213) -5.09%,rgb(255, 86, 13) 106.28%);
+}
+/* 46:31 */ 
+.about-achievements{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+.achievements{
+    display: flex;;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.5s;
+}
+.about-achievements h1{
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(270deg, #DF8908 50.41%, #b415ff 90.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.about-achievements p{
+    font-size: 22px;
+    font-weight: 500;
+}
+.about-skill:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.achievement:hover{
+    transform: scale(3);
+    transition: 0.5s;
+}
+@media (max-width: 768px) {
+    /* Adjust About Section Layout */
+    .about {
+        margin: 40px 20px;
+        gap: 40px;
+    }
+
+    /* Adjust Title Size */
+    .about-title h1 {
+        font-size: 50px;
+        padding: 0;
+    }
+
+    /* Adjust Image Size in About Left */
+    .about-left img {
+        width: 50vw; /* Adjust to be responsive on small screens */
+        height: 50vw;
+    }
+
+    /* Stack About Sections Vertically */
+    .about-sections {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    /* Adjust Right Section */
+    .about-right {
+        gap: 40px;
+    }
+
+    /* Adjust Paragraph Font Size */
+    .about-para {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    /* Adjust Skills Section Layout */
+    .about-skills {
+        gap: 20px;
+    }
+
+    .about-skill {
+        gap: 30px;
+    }
+
+    .about-skill p {
+        font-size: 18px;
+    }
+
+    /* Hide the horizontal line in Skills on Mobile */
+    .about-skill hr {
+        width: 100%;
+    }
+
+    /* Adjust Achievements Layout */
+    .about-achievements {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .achievements {
+        gap: 15px;
+    }
+
+    .about-achievements h1 {
+        font-size: 40px;
+    }
+
+    .about-achievements p {
+        font-size: 18px;
+    }
+
+    /* Ensure the hover effect on skill and achievement is subtle on mobile */
+    .about-skill:hover, .achievement:hover {
+        transform: scale(1);
+        transition: 0.3s;
+    }
+}

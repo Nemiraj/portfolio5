@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background: #010100;
+  color: white;
+  font-family: 'outfit';
+}
+@media(max-width:600px) {
+  main{
+    flex-direction: column;
+
+  }
+  .content,.sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+}
